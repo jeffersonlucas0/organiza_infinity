@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Organiza Infinity</title>
+    <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQFNR93j4fKXJA/company-logo_200_200/company-logo_200_200/0/1696797819036/infinityschool_logo?e=2147483647&v=beta&t=X855ID8EbNdKw7eqwLFiIYDU4u0ebPDieJK_MX41fxU" type="image/png">
+    <meta name="description" content="Dashboard do sistema de organização e produtividade">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFNR93j4fKXJA/company-logo_200_200/company-logo_200_200/0/1696797819036/infinityschool_logo?e=2147483647&v=beta&t=X855ID8EbNdKw7eqwLFiIYDU4u0ebPDieJK_MX41fxU" alt="Infinity School" class="infinity-logo" loading="lazy">
+                    <span>Organiza Infinity</span>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <div class="search-container">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="globalSearch" placeholder="Pesquisar tarefas, notas, eventos..." autocomplete="off">
+                    <div class="search-results" id="searchResults" role="listbox" aria-label="Resultados da busca"></div>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn" id="notificationBtn" aria-label="Notificações">
+                    <i class="fas fa-bell" aria-hidden="true"></i>
+                    <span class="notification-badge" id="notificationBadge">0</span>
+                </button>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                
+                <div class="user-menu">
+                    <a href="profile.html" class="user-menu-button" aria-label="">
+                    <img id="dashboardAvatar" src="default.png" alt="Avatar do usuário" class="user-avatar" loading="lazy">
+                <div class="user-info">
+                    <span id="userName">Usuário Demo</span>
+                    <small>Infinity School</small>
+                </div>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                
+                    
+                    <div>
+                        
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalTasks">0</h3>
+                        <p>Tarefas Totais</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="completedTasks">0</h3>
+                        <p>Concluídas</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-sticky-note" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalNotes">0</h3>
+                        <p>Anotações</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire" aria-hidden="true"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="streakDays">0</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="quick-actions">
+                    <h2>
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        Acesso Rápido
+                    </h2>
+                    <div class="actions-grid">
+                        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="action-card">
+                            <i class="fab fa-google-drive" aria-hidden="true"></i>
+                            <span>Google Drive</span>
+                            <small>Planilhas e Documentos</small>
+                        </a>
+                        
+                        <a href="https://infinityschool.eadplataforma.app/login" target="_blank" rel="noopener noreferrer" class="action-card">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span>Portal do Aluno</span>
+                            <small>Plataforma EAD</small>
+                        </a>
+                        
+                        <a href="https://www.infinityschool.app/" target="_blank" rel="noopener noreferrer" class="action-card">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            <span>Infinity App</span>
+                            <small>Aplicativo Mobile</small>
+                        </a>
+                        
+                        <a href="calendar.html" class="action-card">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            <span>Calendário</span>
+                            <small>Gerenciar Agenda</small>
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+
+                <section class="calendar-widget">
+                    <h2>
+                        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                        Próximas Atividades
+                    </h2>
+                    <div class="activities-list" id="upcomingActivities">
+                        <!-- Activities will be loaded here -->
+                    </div>
+                    <a href="calendar.html" class="view-all-btn">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        Ver Calendário Completo
+                    </a>
+                </section>
+
+                <section class="quick-notes">
+                    <h2>
+                        <i class="fas fa-sticky-note" aria-hidden="true"></i>
+                        Anotações Rápidas
+                    </h2>
+                    <div class="notes-container" id="notesContainer">
+                        <!-- Notes will be loaded here -->
+                    </div>
+                    <button class="add-note-btn" id="addNoteBtn">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                        Nova Anotação
+                    </button>
+                </section>
+
+            </div>
+        </main>
+    </div>
+   
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal" role="dialog" aria-labelledby="settingsModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="settingsModalTitle">⚙️ Configurações</h3>
+                <button class="close-btn" onclick="dashboard.closeSettings()" aria-label="Fechar modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h4>Notificações</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="enableNotifications" checked>
+                        <span class="slider"></span>
+                        Ativar notificações
+                    </label>
+                </div>
+                <div class="settings-section">
+                    <h4>Produtividade</h4>
+                    <label>
+                        Meta diária de tarefas:
+                        <input type="number" id="dailyTaskGoal" value="5" min="1" max="20">
+                    </label>
+                </div>
+                <div class="settings-section">
+                    <h4>Dados</h4>
+                    <button class="btn-danger" onclick="dashboard.clearAllData()">
+                        <i class="fas fa-trash" aria-hidden="true"></i> Limpar Todos os Dados
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note Modal -->
+    <div class="modal" id="noteModal" role="dialog" aria-labelledby="noteModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="noteModalTitle">Nova Anotação</h3>
+                <button class="close-btn" id="closeNoteModal" aria-label="Fechar modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="noteTitle" placeholder="Título da anotação">
+                <textarea id="noteContent" placeholder="Conteúdo da anotação"></textarea>
+                <select id="noteColor" aria-label="Cor da anotação">
+                    <option value="yellow">Amarelo</option>
+                    <option value="blue">Azul</option>
+                    <option value="green">Verde</option>
+                    <option value="pink">Rosa</option>
+                    <option value="purple">Roxo</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelNote">Cancelar</button>
+                <button class="btn-primary" id="saveNote">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/notes.js"></script>
+    <script src="scripts/habits.js"></script>
+    <script src="scripts/search.js"></script>
+</body>
+</html>

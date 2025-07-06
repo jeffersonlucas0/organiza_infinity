@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organiza Infinity - Login</title>
+    <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQFNR93j4fKXJA/company-logo_200_200/company-logo_200_200/0/1696797819036/infinityschool_logo?e=2147483647&v=beta&t=X855ID8EbNdKw7eqwLFiIYDU4u0ebPDieJK_MX41fxU" type="image/png">
+    <meta name="description" content="Sistema de organização e produtividade da Infinity School">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="background-pattern"></div>
+        
+        <div class="login-container">
+            <div class="login-card">
+                <div class="logo-section">
+                    <div class="logo-container">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFNR93j4fKXJA/company-logo_200_200/company-logo_200_200/0/1696797819036/infinityschool_logo?e=2147483647&v=beta&t=X855ID8EbNdKw7eqwLFiIYDU4u0ebPDieJK_MX41fxU" alt="Infinity School" class="infinity-logo" loading="lazy">
+                        <div class="logo-text">
+                            <h1>Organiza Infinity</h1>
+                            <p>Sistema de Organização e Produtividade</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="welcome-section">
+                    <h2>Faça seu Login</h2>
+                    <p>Entre com suas credenciais para acessar o sistema</p>
+                </div>
+                
+                <form class="login-form" id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            E-mail
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@infinityschool.com" required autocomplete="email">
+                        <div class="field-error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                            Senha
+                        </label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" placeholder="Digite sua senha" required autocomplete="current-password">
+                            <button type="button" class="toggle-password" id="togglePassword" aria-label="Mostrar/ocultar senha">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="field-error" id="passwordError"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span class="checkmark"></span>
+                            Lembrar de mim
+                        </label>
+                        <a href="#" class="forgot-password" id="forgotPassword">Esqueceu a senha?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <span class="btn-text">Entrar no Sistema</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </form>
+                
+                <div class="demo-info">
+                    <div class="demo-header">
+                        <i class="fas fa-user-circle" aria-hidden="true"></i>
+                        <span>Acesso de Demonstração</span>
+                    </div>
+                    <p><strong>Este é um sistema de demonstração.</strong> Para entrar, você pode:</p>
+                    <div class="demo-options">
+                        <div class="demo-option">
+                            <strong>Opção 1:</strong> Use qualquer email e senha válidos
+                        </div>
+                        <div class="demo-option demo-credentials" id="demoCredentials">
+                            <strong>Opção 2:</strong> Clique aqui para preencher automaticamente:
+                            <br><code>admin@infinityschool.com</code> / <code>123456</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-footer">
+                    <div class="footer-links">
+                        <a href="https://www.infinityschool.app/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            Infinity App
+                        </a>
+                        <a href="https://infinityschool.eadplataforma.app/login" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            Portal do Aluno
+                        </a>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2025 Infinity School. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Entrando no sistema...</p>
+        </div>
+    </div>
+    <script>
+  // Limpa o localStorage toda vez que entrar na página de login
+  localStorage.removeItem('user');
+    </script>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
