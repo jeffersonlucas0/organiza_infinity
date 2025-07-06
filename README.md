@@ -111,7 +111,7 @@ organiza-infinity/
 
 ## 📱 Capturas de Tela
 
-### Tela de Login ![Login do Organiza Infinity](./screenshots/Login.png)
+### Tela de Login ![Login do Organiza Infinity](./screenshots/login.png)
 - Interface limpa com gradiente da marca
 - Formulário de autenticação
 - Informações sobre o demo
